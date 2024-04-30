@@ -66,6 +66,7 @@ router.get("/", verifyToken, async (req: Request, res: Response) => {
   }
 });
 
+// Edit Route
 router.get("/:id", verifyToken, async (req: Request, res: Response) => {
   const id = req.params.id.toString();
   try {
@@ -79,6 +80,7 @@ router.get("/:id", verifyToken, async (req: Request, res: Response) => {
   }
 });
 
+// Update
 router.put(
   "/:hotelId",
   verifyToken,
