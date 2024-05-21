@@ -55,7 +55,7 @@ const GuestInfoForm = ({ hotelId, pricePerNight }: Props) => {
     navigate("/sign-in", { state: { from: location } });
   };
 
-  const onSubmit = (data: GuestInfoFormData) => {
+  const onSubmit = async (data: GuestInfoFormData) => {
     search.saveSearchValues(
       "",
       data.checkIn,
@@ -64,6 +64,8 @@ const GuestInfoForm = ({ hotelId, pricePerNight }: Props) => {
       data.childCount
     );
     navigate(`/hotel/${hotelId}/booking`, { state: { from: location } });
+    
+    
   };
 
   return (

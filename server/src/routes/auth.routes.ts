@@ -56,6 +56,8 @@ router.post(
 );
 
 router.get("/validate-token", verifyToken, (req: Request, res: Response) => {
+  console.log("token generated");
+  
   res.status(200).send({ userId: req.userId });
 });
 
